@@ -1,0 +1,657 @@
+:root{
+    --Ubuntu: 'Ubuntu', sans-serif;
+    --Sant: 'Open Sans', sans-serif;
+    --ColorP1: #1e3c72;
+    --ColorP2:#2a5298;
+    --negro: #29323C;
+   /*  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%); */
+    /* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--Ubuntu);
+}
+
+body::-webkit-scrollbar {
+    width: 13px;     /* Tamaño del scroll en vertical */
+    height: 13px;    /* Tamaño del scroll en horizontal */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--ColorP2) 0%, var(--ColorP1) 100%);
+    border-radius: 4px;
+}
+
+
+/*-----INICIA HEADER----------- */
+
+header{
+    width: 100%;
+    height: 4.5rem;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+header > nav{
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: #fff;
+    position: fixed;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+header > nav.sombra{
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+header > nav > .nav_logo{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-decoration: none;
+}
+
+header > nav > .nav_logo> img{
+    width: 2.2rem;
+    height: auto;
+    margin-right: 2rem;
+}
+
+header > nav > .nav_logo> h2{
+    font-size: 1.5rem;
+    letter-spacing: .7rem;
+    color: var(--negro);
+
+}
+
+header > nav > .nav_links{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+header > nav > .nav_links > .linkBlog{
+    font-size: .9rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    transition: .3s;
+    background: linear-gradient(180deg, #FF9A44 0%, #FC6076 100%);
+    padding: .8rem 1.6rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+
+header > nav > .nav_links > .iconBlog > img{
+    width: 0;
+    height: 0;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+header > nav > .nav_links > .linkPerfil > img{
+    width: 3.2rem;
+    height: auto;
+    margin: auto 0;
+}
+
+/* -------------TERMINA HEADER----------------- */
+
+
+/* -------------MAIN---------------------- */
+main{
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+.degradado{
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+    text-align: center;
+    margin: 1rem auto 0 auto;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.degradado:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--ColorP2) 0%, var(--ColorP1) 96.25%);
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+form{
+    width: 60%;
+    height: auto;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form > input[type="text"]{
+    font-size: 2rem;
+    border-radius: 10px;
+    padding: .3rem .4rem;
+    margin: 1rem;
+    font-weight: 700;
+    border: 3px solid var(--ColorP1);
+    outline: none;
+    transition: .3s;
+    color: #29323C;
+}
+
+form > input[type="text"]:focus{
+    border: 3px solid var(--ColorP2);
+}
+
+
+form > input[type="button"]{
+    font-size: .9rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    transition: .3s;
+    background: linear-gradient(180deg, var(--ColorP1) 0%, var(--ColorP2) 100%);
+    padding: .8rem 1.6rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: fit-content;
+    margin: .7rem auto;
+    cursor: pointer;
+}
+
+
+.resultado{
+    text-align: center;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+    font-size: 1.8rem;
+    margin: .6rem auto 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.resultado::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--ColorP2) 0%, var(--ColorP1) 96.25%);
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.numResultado{
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: center;
+    white-space: pre;
+    margin: .6rem auto;
+    color: #29323C;
+}
+
+.Divprocedimiento{
+    width: 100%;
+    height: 18rem;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}
+
+.Divprocedimiento .procedimiento{
+    height: 100%;
+    width: 75%;
+    border-radius: 9px;
+    box-shadow: inset -2px -2px 5px 0 rgba(0, 0, 0, 0.25),inset 2px 2px 5px 0 rgba(0, 0, 0, 0.25) ;
+    background-color: #fff;
+    padding: .2rem .6rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Ocultar Resultados */
+.Divprocedimiento .procedimiento .NoMostrar{
+    width: 0;
+    height: 0;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.Divprocedimiento .procedimiento .NoMostrar.activo{
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset -2px -2px 5px 0 rgba(0, 0, 0, 0.25),inset 2px 2px 5px 0 rgba(0, 0, 0, 0.25) ;
+    border-radius: 9px;
+}
+
+
+.Divprocedimiento .procedimiento .NoMostrar button{
+    font-size: .9rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s;
+    background: linear-gradient(180deg, var(--ColorP1) 0%, var(--ColorP2) 100%);
+    padding: .8rem 1.6rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: fit-content;
+    margin: .7rem auto;
+    cursor: pointer;
+}
+
+.Divprocedimiento .procedimiento::-webkit-scrollbar {
+    width: 10px;     /* Tamaño del scroll en vertical */
+    height: 10px;    /* Tamaño del scroll en horizontal */
+}
+
+.Divprocedimiento .procedimiento::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--ColorP1) 0%, var(--ColorP2) 100%);
+    border-radius: 4px;
+}
+
+.Divprocedimiento .procedimiento h3{
+    font-size: 1.4rem;
+    text-align: center;
+    margin: .4rem auto;
+    color: #29323C;
+}
+
+.Divprocedimiento .procedimiento h5{
+    font-size: 1rem;
+    text-align: center;
+    margin: .2rem auto;
+    color: var(--ColorP1);
+}
+
+.Divprocedimiento .procedimiento .Resultado2{
+    text-align: center;
+    color: var(--ColorP1);
+    font-size: 2.5rem;
+    margin: 1rem auto;
+}
+
+
+.Divprocedimiento .procedimiento .NumDerecha{
+    width: fit-content;
+    height: 3rem;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
+
+.Divprocedimiento .procedimiento .NumDerecha p{
+    width: 3rem;
+    height: 2.7rem;
+    margin: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #29323C;
+}
+
+.Divprocedimiento .procedimiento .NumDerecha p.potencias{
+    font-size: 1.4rem;
+}
+
+
+.Divprocedimiento .procedimiento .NumDerecha p.IndicaPotencia{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.Divprocedimiento .procedimiento .tablaProcedimientos div{
+    width: 2rem;
+    height: 1rem;
+    background-color: var(--ColorP2);
+}
+
+
+.Divprocedimiento .historial{
+    width: 20%;
+    height: 100%;
+    border-radius: 9px;
+    box-shadow: inset -2px -2px 5px 0 rgba(0, 0, 0, 0.25),inset 2px 2px 5px 0 rgba(0, 0, 0, 0.25) ;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AppRecomendadas{
+    width: 100%;
+    height: 9rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem auto;
+}
+
+.AppRecomendadas a{
+    width: fit-content;
+    padding: 1rem 2rem;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.AppRecomendadas a.bg-white{
+    background: linear-gradient(90deg, #F9F2F8 0%, #E0DDE8 100%);
+    font-size: 1rem;
+    color: #65E600;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.AppRecomendadas a.bg-red{
+    background: linear-gradient(90deg, #C31432 0%, #240B36 100%);
+    font-size: 1rem;
+    color: #F6F6F6;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.AppRecomendadas a.bg-yellow{
+    background: linear-gradient(90deg, #FFD200 0%, #F7971E 100%);
+    font-size: 1rem;
+    color: #F6F6F6;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* VENTANA EMERGENTE */
+.VentanaEmergente{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    z-index: -1;
+}
+
+.VentanaEmergente.activo{
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+.VentanaEmergente .Card{
+    width: 40%;
+    height: 18rem;
+    background: linear-gradient(180deg, var(--ColorP1) 0%, var(--ColorP2) 100%);
+    border-radius: 20px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.VentanaEmergente .Card h5{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #F6F6F6;
+    margin: 0 auto 2rem auto;
+}
+
+.VentanaEmergente .Card button{
+    font-size: .9rem;
+    color: #1e3c72;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s;
+    background:#fff;
+    padding: .8rem 1.6rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+}
+
+
+
+/* DISEÑO ADAPTABLE DE HEADER */
+
+@media screen and (max-width: 1100px) {
+    html{
+        font-size: 16px;
+    }
+
+    
+    header > nav > .nav_logo{
+        width: 45%;
+        
+    }
+
+    header > nav > .nav_links{
+        width: 20%;
+        
+    }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    html{
+        font-size: 15px;
+    }
+
+    header > nav > .nav_links{
+        width: 20%;
+    }
+
+
+    .VentanaEmergente .Card {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    html{
+        font-size: 14px;
+    }
+
+    header > nav > .nav_links{
+        width: 25%;
+    }
+
+    .degradado {
+        font-size: 3rem;
+    }  
+    
+    form {
+        width: 70%;
+    }
+
+    .Divprocedimiento{
+        flex-wrap: wrap;
+        height: 40rem;
+    }
+
+    .Divprocedimiento .procedimiento{
+        width: 85%;
+        height: 65%;
+    }
+
+    .Divprocedimiento .historial{
+        width: 40%;
+        height: 32%;
+        margin: 2rem auto;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header > nav > .nav_logo{
+        width: 55%;
+    }
+
+    header > nav > .nav_links{
+        width: 25%;
+        justify-content: space-evenly;
+    }
+
+    /* Mostramos el icono de blog */
+    header > nav > .nav_links > .iconBlog > img{
+        width: 3rem;
+        height: auto;
+        margin: auto 0;
+        display:block;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Ocultamos el texto de blog */
+    header > nav > .nav_links > .linkBlog{
+        width: 0;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        display: none;
+    }
+
+    .VentanaEmergente .Card{
+        width: 60%;
+        height: 20rem;
+    }
+
+    .VentanaEmergente .Card button {
+        font-size: 1.1rem;
+    }    
+
+}
+
+@media screen and (max-width: 600px) {
+    html{
+        font-size: 13px;
+    }
+
+    header > nav > .nav_logo{
+        width: 65%;
+    }
+
+    .VentanaEmergente .Card {
+        width: 70%;
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html{
+        font-size: 12px;
+    }
+
+    .Divprocedimiento .historial{
+        width: 60%;
+        height: 32%;
+        margin: 2rem auto;
+    }
+
+    .VentanaEmergente .Card {
+        width: 70%;
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    html{
+        font-size: 11px;
+    }
+
+    .VentanaEmergente .Card {
+        width: 80%;
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    header > nav > .nav_links{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    html{
+        font-size: 10px;
+    }
+}

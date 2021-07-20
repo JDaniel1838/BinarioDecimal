@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binario a Decimal- Algoritime</title>
+
+    <link rel="shortcut icon" href="img/Algoritime.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link rel="stylesheet" href="css/binarioDecimal.css">
+</head>
+<body>
+    <header id="inicio">
+        <nav id="navbar">
+            <a href="index.html" class="nav_logo">
+                <img src="img/Algoritime.svg" alt="Logo Algoritime">
+                <h2>ALGORITIME</h2>
+            </a>
+            
+            <div class="nav_links">
+                <a href="" class="linkBlog blog">BLOG</a>
+                <a href="" class="iconBlog blog"><img src="img/blog.svg" alt=""></a>
+                <a href="" class="linkPerfil" id="perfil"><img src="img/perfil.png" alt=""></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="degradado">Binario a Decimal</h1>
+        <form>
+            <input id="InputBinario" type="text">
+            <input id="convBinDec" type="button" value="Convertir">
+        </form>
+
+        <h3 class="resultado">Resultado: </h3>
+        <h4 class="numResultado" id="resultado">  </h4>
+        <div>
+            <div class="Divprocedimiento">
+                
+                <div class="procedimiento">
+                    <h3>Procedimiento</h3>
+                    <h5>1.Ordenamos los números de derecha a izquierda.</h5>
+                    <div class="NumDerecha" id="Ordenados">
+                        
+                    </div>
+                    <h5>2.Asignamos una potencia con base 2 a cada numero</h5>
+                    <div class="NumDerecha" id="PonteciasNum">
+                        
+                    </div>
+                    <div class="NumDerecha" id="PonteciasDos">
+                        
+                    </div>
+                    <h5>3.Multiplicamos el numero por la potencia y sumamos los resultados</h5>
+                    <div class="NumDerecha" id="Multiplicacion">
+                        
+                    </div>
+                    <div class="NumDerecha" id="Resultados">
+                        
+                    </div>
+                    <h5>4.Sumamos todos los resultados</h5>
+                    <h4 id="resultado2" class="Resultado2"></h4>
+                    <!-- Vista Ocultando Resultados -->
+                    <div id="noMostrar" class="NoMostrar activo">
+                        <button id="MostrarResultados">Mostrar Resultados</button>
+                    </div>
+                </div>
+                <div class="historial">
+                    <h6 class="">Sin historial</h6>
+                </div>
+            </div>
+            <div class="AppRecomendadas">
+                <a href="" class="bg-white">Decimal a Octal</a>
+                <a href="" class="bg-red">Hexa a decimal</a>
+                <a href="" class="bg-yellow">Octal a binario</a>
+            </div>
+        </div>
+    </main>
+    <div class="VentanaEmergente">
+        <div class="Card">
+            <h5 id="MensajeVentana">Texto Mensaje</h5>
+            <button id="CerrarVentana">Cerrar</button>
+        </div>
+        
+    </div>
+
+    <script src="js/main/binarioDecimal.js"></script>
+</body>
+</html>
