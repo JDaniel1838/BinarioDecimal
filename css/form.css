@@ -550,7 +550,7 @@ main .bg_img_2{
 
 @media screen and (max-width: 320px) {
     html{
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .DivForm form {
